@@ -8,7 +8,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
     $('input.typeahead').typeahead({
-        name: 'countries',
+        name: 'products',
         remote: 'http://localhost:3000/search?key=%QUERY',
         limit: 10
     });
@@ -67,7 +67,7 @@ $(document).ready(function(){
 </head>
 <body>
    <div class="page-header">
-        <h1>Ajax Search Box using Node and MySQL <small>Codeforgeek Tutorial</small></h1>
+        <h1>Ajax Search Box using Node and MySQL!</h1>
     </div>
     <div class="bs-example">
         <input type="text" name="typeahead" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Type your Query">

@@ -1,3 +1,6 @@
+//Stackdriver Debug Enable
+require('@google-cloud/debug-agent').start();
+
 var express = require('express');
 var mysql = require('mysql');
 //var google = require('googleapis');

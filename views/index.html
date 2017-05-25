@@ -9,7 +9,7 @@
 $(document).ready(function(){
     $('input.typeahead').typeahead({
         name: 'products',
-        remote: 'https://autocomplete-dot-bill-hahn-sandbox.appspot.com/search?key=%QUERY',
+        remote: '../search?key=%QUERY',
         limit: 10
     });
 });
@@ -21,14 +21,14 @@ $(document).ready(function(){
 	margin: 50px;
 }
 .typeahead, .tt-query, .tt-hint {
-	border: 2px solid #CCCCCC;
+	width: 800px;
+  border: 2px solid #CCCCCC;
 	border-radius: 8px;
 	font-size: 18px;
 	height: 24px;
 	line-height: 24px;
 	outline: medium none;
 	padding: 4px 6px;
-	width: 400px;
 }
 .typeahead {
 	background-color: #FFFFFF;
@@ -44,7 +44,7 @@ $(document).ready(function(){
 }
 .tt-hint {
 /*	color: #999999;*/
-width: 400px;
+width: 800px;
 height: 24px;
 padding: 4px 6px;
 font-size: 18px;
@@ -71,8 +71,8 @@ outline: none;
 }
 .tt-suggestion {
 	font-size: 18px;
-	line-height: 1px;
-	padding: 1px 0px;
+	line-height: 18px;
+	padding: .1px 0px;
 	margin: 0;
 }
 .tt-suggestion.tt-is-under-cursor {

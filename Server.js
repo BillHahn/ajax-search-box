@@ -6,9 +6,9 @@ var mysql = require('mysql');
 //var google = require('googleapis');
 //var app = express();
 
-//express app needs 'trust proxy' when running in GCP, I think.
 const app = express();
-app.enable('trust proxy');
+//express app needs 'trust proxy' when running in GCP, I think.
+//app.enable('trust proxy');
 
 //Get MySQL connection info from environment variables
 var config = {
@@ -17,7 +17,7 @@ var config = {
   database: process.env.MYSQL_DATABASE
 };
 
-//Check environment variables to debug accurate
+//Check environment variables to debug accuracy
 /*
 console.log("Environment Variables: " + process.env.MYSQL_USER + " / " +
   process.env.MYSQL_PASSWORD + " / " + process.env.MYSQL_DATABASE); */

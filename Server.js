@@ -37,11 +37,11 @@ app.get('/', function(req, res) {
   res.render('index.html');
   console.log("\nRequest Headers: \n")
     //console.log(JSON.stringify(req.headers));
-  var countryHeader = req.headers['X-AppEngine-Country'];
-  var regionHeader = req.headers['X-AppEngine-Region'];
-  var cityHeader = req.headers['X-AppEngine-City'];
-  var cityatlongHeader = req.headers['X-AppEngine-CityLatLong'];
-  var userAgentHeader = req.headers['user-agent'];
+  var countryHeader = req.get("X-AppEngine-Country");
+  var regionHeader = req.get('X-AppEngine-Region');
+  var cityHeader = req.get('X-AppEngine-City');
+  var cityatlongHeader = req.get('X-AppEngine-CityLatLong');
+  var userAgentHeader = req.get('user-agent');
   console.log(
     "\n Country: " + countryHeader +
     "\n Region: " + regionHeader +

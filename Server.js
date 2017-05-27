@@ -1,4 +1,4 @@
-//Stackdriver Debug Enable
+//Stackdriver Debug Enabled
 require('@google-cloud/debug-agent').start();
 
 var express = require('express');

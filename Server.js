@@ -35,7 +35,31 @@ app.engine('html', require('ejs').renderFile);
 
 app.get('/', function(req, res) {
   res.render('index.html');
+  console.log("\nRequest Headers: \n")
+    //console.log(JSON.stringify(req.headers));
+  var countryHeader = req.headers['X-AppEngine-Country'];
+  var regionHeader = req.headers['X-AppEngine-Region'];
+  var cityHeader = req.headers['X-AppEngine-City'];
+  var cityatlongHeader = req.headers['X-AppEngine-CityLatLong'];
+  var userAgentHeader = req.headers['user-agent'];
+  console.log(
+    "\n Country: " + countryHeader +
+    "\n Region: " + regionHeader +
+    "\n Region: " + cityHeader +
+    "\n Region: " + cityatlongHeader +
+    "\n Agent from headers: " + userAgentHeader
+  );
 });
+/*
+request.getHeader("X-AppEngine-Country")
+
+request.getHeader("X-AppEngine-Region")
+
+request.getHeader("X-AppEngine-City")
+
+request.getHeader("X-AppEngine-CityLatLong")
+
+*/
 
 app.get('/search', function(req, res) {
   connection.query('SELECT name from products where name like "%' + req.query

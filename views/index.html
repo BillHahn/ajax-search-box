@@ -103,12 +103,22 @@ outline: none;
      </a>
         <h1>GCP Autocomplete Ajax UI: GAE + Node.js + MySQL Backend!
         </h1>
-        <h2>
+        <h3>
+        <% var noLocationInfoAvailable = "[No Location Info Available! You must not be running in Google Cloud GAE.  You're probably running locally.]"; %>
+        <% if (countryinfo) { %>
+        [Country:
         <%= countryinfo %>
+        ] [Region:
         <%= regioninfo %>
-		<%= cityinfo %>
-		<%= cityatlonginfo %>
-        </h2>
+        ] [City:
+        <%= cityinfo %>
+        ] [Lat,Long:
+        <%= cityatlonginfo %>
+        ]
+        <% } else { %>
+        <%= noLocationInfoAvailable %>
+        <% }; %>
+      </h3>
     </div>
     <div class="bs-example">
         <input type="text" name="typeahead" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Type your Query">

@@ -1,0 +1,4 @@
+applications:
+- name: bh-autocomplete
+  random-route: bh-autocomplete
+  memory: 128M
